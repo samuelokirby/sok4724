@@ -1,0 +1,186 @@
+body{
+    margin: 0 auto;
+    padding: 2px 40px;
+    background-color: #f9f9f9;
+}
+
+.chatP{
+    margin: auto;
+}
+
+#chat{
+    font-family: 'Merriweather', 'sans-serif';
+}
+
+h1{
+    font-weight: bold;
+    text-size: 32px;
+    text-align: left;
+    overflow: hidden;
+    padding-top: 75px;
+    margin: auto;
+    width: 50%;
+    font-family: 'Merriweather', 'sans-serif';
+}
+
+.chatBox{
+    /*text-align: center;*/
+    margin: auto;
+    height: 400px;
+    overflow: auto;
+    font-family: 'Montserrat', 'sans-serif';
+    font-size: 20px;
+    width: 21%;
+}
+
+.linksP{
+    text-align: center;
+    overflow: hidden;
+    font-size: 28px;
+    width: 400px;
+    margin: auto;
+    padding: 200px 0px;
+    font-family: 'Montserrat', 'sans-serif';
+}
+
+.contactP{
+    text-align: left;
+    overflow: auto;
+    font-size: 24px;
+    width: 50%;
+    margin: auto;
+    padding: 10px 0px;
+    font-family: 'Montserrat', 'sans-serif';
+}
+
+h2{
+    text-align: center;
+    width: 400px;
+    font-size: 36px;
+    border-radius: 25px;
+    padding: 50px 50px;
+    overflow: hidden;
+    border-spacing: 30px;
+    word-wrap: break-word;
+    margin: auto;
+}
+
+input[type="text"]{
+    text-align: center;
+    margin: auto;
+    text-size: 12px;
+    border-radius: 15px;
+    text-color: red;
+    font-size: 32px;
+    font-family: 'Montserrat', serif;
+    display: block;
+}
+
+button{
+    text-align: center;
+    margin: auto;
+    text-size: 12px;
+    display: block;
+    font-size: 24px;
+    background-color: #e0e0e0;
+    border-radius: 5px;
+    border-style: solid;
+    font-family: 'Merriweather', sans-serif;
+    padding: 8px 8px;
+}
+/*.responseData{float:right}*/
+
+
+/*Top Navigation Bar*/
+.topnav{
+    width: 100%;
+    font-family: 'Montserrat' , serif;
+    background-color: white;
+    overflow: hidden;
+}
+
+.topnav a{
+    float: left;
+    /*padding: 0px 3px;*/
+    color: #bababa;
+    text-align: center;
+    /*padding: 14px 16px;*/
+    width: 33%;
+    text-decoration: none;
+    font-size: 24px;
+    line-height: 24px;
+}
+
+.topnav a:hover{
+    backgorund-color: #ddd;
+    color:black;
+}
+
+.topnav a.active{
+    background-color: #d6d6d6;
+    color: white;
+}
+
+
+
+/*Image Gallery*/
+
+.galleryContainer{
+    margin: auto;
+    text-align: center;
+    width: 50%;
+    padding-top: 20px;
+    padding-bottom: 80px;
+}
+
+div.gallery {
+    border: 1px solid #ccc;
+}
+
+div.gallery:hover {
+    border: 1px solid #777;
+}
+
+div.gallery img {
+    width: 200px;
+    height: 200px;
+}
+
+div.desc {
+    font-family: 'Montserrat', sans-serif;
+    padding: 15px;
+    text-align: center;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.responsive {
+    padding: 0 6px;
+    float: left;
+}
+
+@media only screen and (max-width: 700px) {
+    .responsive {
+        width: 49.99999%;
+        margin: 6px 0;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    .responsive {
+        width: 100%;
+    }
+}
+
+.clearfix:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+
+
+
+
