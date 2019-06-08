@@ -1,8 +1,16 @@
 var accessToken = "d40a2e1786324a019851c794082aaaa1";
 var baseUrl = "https://api.api.ai/v1/";
+
+function scroll(){
+    var divx = document.getElementById("chatScroll");
+    divx.scrollTop = divx.scrollHeight;
+}
+
+
 $(document).ready(function() {
     $("#input").keypress(function(event) {
         if (event.which == 13) {
+            scroll();
             var meString = "Me: ";
             meString = meString.fontcolor("blue");
             $('.chatBox').append('<span class="userInput">' + meString + "\n" + $('input').val() + '</span><br><br>')
@@ -16,6 +24,7 @@ $(document).ready(function() {
 
 function send(query) {
     var text = query;
+    scroll();
     $.ajax({
         type: "POST",
         url: baseUrl + "query?v=20180101",
@@ -37,4 +46,5 @@ function setResponse(val) {
     var newString = '<span class="responseData">'+ botString + val.result.fulfillment.speech + '</span><br><br>';
     newString = newString.replace(/\s+/g,' ').trim();
     $(".chatBox").append("\n" + newString + "\n");
+    scroll();
 }
