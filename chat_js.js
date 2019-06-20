@@ -6,6 +6,23 @@ function scroll(){
     divx.scrollTop = divx.scrollHeight;
 }
 
+$(document).ready(function(){
+   document.getElementById("input").addEventListener('click', function (e){
+       document.getElementById("whatToKnow").style.visibility = "visible";
+       document.getElementById("whatToKnow").style.display = "none";
+       $("#whatToKnow").fadeIn(1500);
+   });
+});
+
+$(document).ready(function(){
+    document.getElementById("rec").addEventListener('click', function(d){
+        var e = jQuery.Event("keypress");
+        e.which = 13; //choose the one you want
+        e.keyCode = 13;
+        $("#input").trigger(e);
+    });
+});
+
 
 $(document).ready(function() {
     $("#input").keypress(function(event) {
@@ -22,20 +39,26 @@ $(document).ready(function() {
     });
 });
 
+const history = [];
 function send(query) {
     var text = query;
     scroll();
     $.ajax({
         type: "POST",
-        url: baseUrl + "query?v=20180101",
+        url: baseUrl + "query?v=2180101",
         contentType: "application/json; charset=utf-8",
         dataType: "json",
         headers: {
             "Authorization": "Bearer " + accessToken
         },
-        data: JSON.stringify({ query: text, lang: "en", sessionId: "somerandomthing" }),
+        data: JSON.stringify({ query: text, lang: "en", sessionId: "sam" }),
         success: function(data) {
-            setResponse(data);
+            var timeout = 0;
+            if($.inArray(text, history)){
+                timeout = 1000 * ((Math.random() * 2) + 0.5);
+            }
+            history.push(text);
+            setTimeout(setResponse, timeout, data);
         }
     });
 }
