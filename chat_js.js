@@ -1,5 +1,6 @@
 var accessToken = "d40a2e1786324a019851c794082aaaa1";
 var baseUrl = "https://api.api.ai/v1/";
+var hasUsedInput = 0;
 
 function scroll(){
     var divx = document.getElementById("chatScroll");
@@ -8,9 +9,13 @@ function scroll(){
 
 $(document).ready(function(){
    document.getElementById("input").addEventListener('click', function (e){
-       document.getElementById("whatToKnow").style.visibility = "visible";
-       document.getElementById("whatToKnow").style.display = "none";
-       $("#whatToKnow").fadeIn(1500);
+       if(hasUsedInput == 0){
+           document.getElementById("whatToKnow").style.visibility = "visible";
+           document.getElementById("whatToKnow").style.display = "none";
+           $("#whatToKnow").fadeIn(1500);
+           hasUsedInput = 1;
+       }
+
    });
 });
 
