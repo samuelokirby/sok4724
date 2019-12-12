@@ -8,7 +8,8 @@
 
 
         <!--fonts-->
-        <link href="https://fonts.googleapis.com/css?family=Merriweather|Oswald&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Merriweather&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Oswald&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
 
 
@@ -18,6 +19,7 @@
 
     </head>
 
+    <body>
 
     <!-- Top Nav Bar-->
     <!-- Top Nav Bar-->
@@ -27,7 +29,7 @@
         <a href="links.html">CONTACT</a>
     </div>
 
-    <body>
+
 
 
     <h2 id="chat" style="display: none;">
@@ -45,18 +47,22 @@
 
 
     <!-- Where chatbot starts-->
-        <p class="chatP">
-            <div class = 'chatBox' id="chatScroll">
-            </div>
+    <p class="chatP">
+        <div class = 'chatBox' id="chatScroll">
+        </div>
 
-            <input id="input" type="text" style="width: 430px;">
-            <button id="rec">Ask</button>
-        </p>
+        <input id="input" type="text" style="width: 430px;">
+        <button id="rec">Ask</button>
+    <p>
+    </p>
+
 
 
     </body>
 <!-- -->
 <!--    fade in h2 -->
+
+
     <script>
         $(document).ready(function(){
             $("#chat").fadeIn(2000);
@@ -64,9 +70,6 @@
     </script>
 
 <!--    lock scrollwheel at bottom-->
-    <script>
-
-    </script>
 
     <script src="chat_js.js"></script>
 
